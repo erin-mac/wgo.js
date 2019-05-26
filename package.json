@@ -1,0 +1,50 @@
+{
+  "name": "wgo",
+  "version": "1.0.0",
+  "description": "WGo.js is javascript library for purposes of go game. The basic idea of this library is to help to create go web application easily without laborious programming of game's logic or board graphic interface. It is descendant of WGoApi and we can say WGo.js is second version of this library. I decided to remove word 'Api' from the name and add suffix '.js' as is common for javascript libraries. But in texts I use shortly WGo.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "react-router-dom": "^5.0.0",
+    "socket.io": "^2.2.0",
+    "webpack": "^4.32.2"
+  },
+  "babel": {
+    "presets": [
+      "react",
+      "stage-2"
+    ]
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "nodemon": "^1.18.11",
+    "webpack-cli": "^3.3.1"
+  },
+  "scripts": {
+    "postinstall": "npm run webpack",
+    "webpack": "webpack -w",
+    "webpack:dev": "npm run webpack -- --mode=development --watch",
+    "start:dev": "npm run webpack:dev & ./node_modules/.bin/nodemon server/app.js --ignore public/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erin-mac/wgo.js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erin-mac/wgo.js/issues"
+  },
+  "homepage": "https://github.com/erin-mac/wgo.js#readme"
+}

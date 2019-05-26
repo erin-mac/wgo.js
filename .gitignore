@@ -2,6 +2,10 @@
 ## Eclipse
 #################
 
+.node_modules
+docs/
+i18n/
+test/
 *.pydevproject
 .project
 .metadata
